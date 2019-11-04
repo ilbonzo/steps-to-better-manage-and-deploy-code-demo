@@ -1,0 +1,24 @@
+{
+    "name": "ilbonzo/wp-site",
+    "type": "project",
+    "config": {
+        "vendor-dir": "web/content/vendor"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url" : "https://wpackagist.org"
+        }
+    ],
+    "extra": {
+        "wordpress-install-dir": "web/wp",
+        "installer-paths": {
+            "web/content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "web/content/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    },
+    "require": {
+        "johnpbloch/wordpress": "^5.2",
+        "wpackagist-theme/twentynineteen": "*"
+    }
+}

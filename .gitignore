@@ -1,0 +1,8 @@
+site/web/wp/
+site/web/content/vendor/
+site/web/content/themes/*
+site/web/content/plugins/*
+
+!site/web/content/themes/luna-fl-theme
+
+.vagrant
