@@ -4,5 +4,6 @@ site/web/content/themes/*
 site/web/content/plugins/*
 
 !site/web/content/themes/luna-fl-theme
+!site/web/content/plugins/luna-fl-plugin
 
 .vagrant
