@@ -1,0 +1,98 @@
+<?php
+// Load Composer's autoloader
+        require_once (__DIR__.'/../content/vendor/autoload.php');
+
+        // Move the location of the content dir
+        define('WP_CONTENT_DIR', dirname(__FILE__).'/../content');
+        define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']) . '/content');
+        define('WP_THEME_DIR',  dirname(__FILE__).'/../content/themes' );
+        define('WP_PLUGIN_DIR',  dirname(__FILE__).'/../content/plugins' );
+/**
+ * The base configuration for WordPress
+ *
+ * The wp-config.php creation script uses this file during the
+ * installation. You don't have to use the web site, you can
+ * copy this file to "wp-config.php" and fill in the values.
+ *
+ * This file contains the following configurations:
+ *
+ * * MySQL settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://codex.wordpress.org/Editing_wp-config.php
+ *
+ * @package WordPress
+ */
+
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'beetbox' );
+
+/** MySQL database username */
+define( 'DB_USER', 'root' );
+
+/** MySQL database password */
+define( 'DB_PASSWORD', 'password' );
+
+/** MySQL hostname */
+define( 'DB_HOST', 'localhost' );
+
+/** Database Charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8mb4' );
+
+/** The Database Collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
+
+/**#@+
+ * Authentication Unique Keys and Salts.
+ *
+ * Change these to different unique phrases!
+ * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define( 'AUTH_KEY',         '!I#>ZxIuO8>GtKG[%dH_WJWLYa@Y0U1o5EA_Yr_kdQgs3+Q^VV4++;jDw[J7ZhRq' );
+define( 'SECURE_AUTH_KEY',  'I2D1Si[XgfTK[,2S8w~D0V!j/I>eBnv<AQ}0adFJ4j5(|2PCCB^I4{SJY z^d+_V' );
+define( 'LOGGED_IN_KEY',    '/?SQ0Tp!T1}h~n9EvzKE (/{Yr,ko:>I8mvR]o&1O_V8U6JP$n3sBBx-w0Vt?y{I' );
+define( 'NONCE_KEY',        'FI8cN]!p1i`xy))Y(6idp>/D%,$q5B|^EI3zn/vS(QBFd7g]URKVVenC!hUe6LR(' );
+define( 'AUTH_SALT',        'TNJB}3Y-rNw:x1 9#Bep|$/Vj-*ZLljw)w=tL0.`0Y3fG9:K7fH<%Z;[@@!>$Ro&' );
+define( 'SECURE_AUTH_SALT', '>:$K0Pf $t/ce3pIEye[8,8zwh@l|xErQ|h5RHmn#3Dp#j_Fm#49(8>RI0$Nuv|`' );
+define( 'LOGGED_IN_SALT',   'SvCQ]<(Wol:&BgaqZ{!_k<_&19v*K.yNGnAnYc]Z[f$OdzWf_|(PFbY.bB;C>BT~' );
+define( 'NONCE_SALT',       'PXa?NM_o|:PjhT>Kei42rcXd|/_A*MdLhW,23cDHxy^w3)^Q*<)aM.6N=bQ sOt7' );
+
+/**#@-*/
+
+/**
+ * WordPress Database Table prefix.
+ *
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix = 'wp_';
+
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the Codex.
+ *
+ * @link https://codex.wordpress.org/Debugging_in_WordPress
+ */
+define( 'WP_DEBUG', false );
+
+/* That's all, stop editing! Happy publishing. */
+
+/** Absolute path to the WordPress directory. */
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+}
+
+/** Sets up WordPress vars and included files. */
+require_once( ABSPATH . 'wp-settings.php' );
