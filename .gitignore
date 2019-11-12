@@ -7,3 +7,4 @@ site/web/content/plugins/*
 !site/web/content/plugins/luna-fl-plugin
 
 .vagrant
+.idea
