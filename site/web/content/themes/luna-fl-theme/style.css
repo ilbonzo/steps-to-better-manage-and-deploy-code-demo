@@ -10,3 +10,9 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twentynineteenchild
 */
+
+
+#page {
+    width: 100%;
+    background: #0afff6;
+}
