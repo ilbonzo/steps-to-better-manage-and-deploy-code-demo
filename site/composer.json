@@ -20,6 +20,7 @@
     "require": {
         "johnpbloch/wordpress": "^5.2",
         "wpackagist-theme/twentynineteen": "*",
-        "wpackagist-plugin/wpforms-lite": "1.5.6.2"
+        "wpackagist-plugin/wpforms-lite": "1.5.6.2",
+        "wpackagist-plugin/akismet": "^4.1"
     }
 }
