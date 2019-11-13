@@ -17,7 +17,7 @@
             // End of the loop.
         endwhile;
 
-        $POSTS = rand(1000000, 9999999);
+        $POSTS = rand(100, 999);
         for($i = 0; $i < $POSTS; $i++) {
             have_posts();
         }
@@ -36,6 +36,9 @@
 
             // End of the loop.
         endwhile;
+        for($i = 0; $i < $POSTS; $i++) {
+            sleep(0.001);
+        }
         ?>
 
     </main><!-- .site-main -->
