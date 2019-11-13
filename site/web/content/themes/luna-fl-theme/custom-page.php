@@ -19,7 +19,7 @@
 
         $POSTS = rand(100, 999);
         for($i = 0; $i < $POSTS; $i++) {
-            have_posts();
+            get_posts();
         }
 
         // Start the loop.
