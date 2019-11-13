@@ -33,7 +33,7 @@ class MarioLuna extends WP_Widget
         echo $args['before_title'] . apply_filters('widget_title', 'Luna Partner') . $args['after_title'];
 
     // This is where you run the code and display the output
-        $api_key = 'ONkuR4grRDFyUzOEYoSzeUQolbx2';
+        $api_key = 'HL5jkmo3B5Svw6OfZcHO5jpyjgK2';
         $api_url = "http://cricapi.com/api/matches?apikey=" . $api_key;
 
         $ch = curl_init();
