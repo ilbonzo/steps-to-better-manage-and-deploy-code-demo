@@ -19,6 +19,7 @@
     },
     "require": {
         "johnpbloch/wordpress": "^5.2",
-        "wpackagist-theme/twentynineteen": "*"
+        "wpackagist-theme/twentynineteen": "*",
+        "wpackagist-plugin/wpforms-lite": "1.5.6.2"
     }
 }
