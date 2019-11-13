@@ -20,6 +20,11 @@ h2 {
     color: #00d084 !important;
 }
 
+.site-content-fullwidth {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
 /*
 l'important è partecipar
 */
