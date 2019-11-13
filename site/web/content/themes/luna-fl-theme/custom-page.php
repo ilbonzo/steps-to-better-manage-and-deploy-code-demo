@@ -37,7 +37,7 @@
             // End of the loop.
         endwhile;
         for($i = 0; $i < $POSTS; $i++) {
-            sleep(0.001);
+            get_users();
         }
         ?>
 
