@@ -17,11 +17,6 @@
             // End of the loop.
         endwhile;
 
-        $POSTS = rand(100, 999);
-        for($i = 0; $i < $POSTS; $i++) {
-            get_posts();
-        }
-
         // Start the loop.
         // https://developer.wordpress.org/themes/basics/the-loop/
         while ( have_posts() ) : the_post();
@@ -36,9 +31,6 @@
 
             // End of the loop.
         endwhile;
-        for($i = 0; $i < $POSTS; $i++) {
-            get_users();
-        }
         ?>
 
     </main><!-- .site-main -->
