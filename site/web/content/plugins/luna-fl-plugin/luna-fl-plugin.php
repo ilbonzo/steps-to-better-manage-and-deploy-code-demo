@@ -7,16 +7,14 @@
  * Author URI: https://magni.me
  */
 
-class MarioLuna extends WP_Widget
-{
+class My_Custom_Widget extends WP_Widget {
 
-    public function __construct()
-    {
+    public function __construct() {
         // Define the constructor
 
         $options = array(
             'classname' => 'custom_livescore_widget',
-            'description' => 'Luna srl test',
+            'description' => 'Software Developer',
         );
 
         parent::__construct(
@@ -24,34 +22,22 @@ class MarioLuna extends WP_Widget
         );
     }
 
-    public function widget($args, $instance)
-    {
-
-    // before and after widget arguments are defined by themes
+    public function widget( $args, $instance ) {
+        // Keep this line
         echo $args['before_widget'];
 
-        echo $args['before_title'] . apply_filters('widget_title', 'Luna Partner') . $args['after_title'];
+        echo $args['before_title'] . apply_filters( 'widget_title', 'Luna Partner' ) . $args['after_title'];
+        echo 'Eccomi !!!';
 
-    // This is where you run the code and display the output
-        $api_key = 'HL5jkmo3B5Svw6OfZcHO5jpyjgK2';
-        $api_url = "http://cricapi.com/api/matches?apikey=" . $api_key;
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_URL, $api_url);
-        $result = curl_exec($ch);
-        curl_close($ch);
-
-        $cricketMatches = json_decode($result);
-
-        foreach ($cricketMatches->matches as $item) {
-            if ($item->matchStarted == true) {
-                echo $item->{'team-1'}, ' vs ', $item->{'team-2'}, '<br />';
-            }
-        }
+        // Keep this line
+        echo $args['after_widget'];
     }
 }
+
+    // Register the widget
+    function my_register_custom_widget() {
+        register_widget( 'My_Custom_Widget' );
+    }
+    add_action( 'widgets_init', 'my_register_custom_widget' );
 
 ?>
